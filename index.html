@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My University Journey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .section {
+            padding: 50px;
+        }
+        .timeline {
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+        .year {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-left: 5px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <header>My University Journey</header>
+    <nav>
+        <button onclick="showSection('academics')">Academics</button>
+        <button onclick="showSection('projects')">Projects</button>
+    </nav>
+    
+    <div id="academics" class="section">
+        <h2>Academics</h2>
+        <div class="timeline">
+            <div class="year"><h3>Year 1</h3><p>Introduction to university life, core subjects, and first exams.</p></div>
+            <div class="year"><h3>Year 2</h3><p>More advanced courses, group projects, and research opportunities.</p></div>
+            <div class="year"><h3>Year 3</h3><p>Specialization, internships, and industry experience.</p></div>
+            <div class="year"><h3>Year 4</h3><p>Final year projects, thesis, and graduation preparation.</p></div>
+        </div>
+    </div>
+    
+    <div id="projects" class="section" style="display:none;">
+        <h2>Projects</h2>
+        <p>Here you can showcase major projects from each year.</p>
+    </div>
+    
+    <script>
+        function showSection(section) {
+            document.getElementById('academics').style.display = 'none';
+            document.getElementById('projects').style.display = 'none';
+            document.getElementById(section).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
