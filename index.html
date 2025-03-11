@@ -9,17 +9,21 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
-            text-align: center;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
         }
         header {
-            background: #333;
+            background: rgba(0, 0, 0, 0.7);
             color: white;
             padding: 20px;
             font-size: 24px;
         }
         .section {
             padding: 50px;
+            background: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 10px;
         }
         .timeline {
             max-width: 800px;
@@ -31,6 +35,24 @@
             margin: 20px 0;
             padding: 20px;
             border-left: 5px solid #333;
+            border-radius: 5px;
+        }
+        .year img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        nav button {
+            background: #444;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        nav button:hover {
+            background: #666;
         }
     </style>
 </head>
@@ -44,16 +66,32 @@
     <div id="academics" class="section">
         <h2>Academics</h2>
         <div class="timeline">
-            <div class="year"><h3>Year 1</h3><p>Introduction to university life, core subjects, and first exams.</p></div>
-            <div class="year"><h3>Year 2</h3><p>More advanced courses, group projects, and research opportunities.</p></div>
-            <div class="year"><h3>Year 3</h3><p>Specialization, internships, and industry experience.</p></div>
-            <div class="year"><h3>Year 4</h3><p>Final year projects, thesis, and graduation preparation.</p></div>
+            <div class="year">
+                <h3>Year 1</h3>
+                <img src="year1.jpg" alt="Year 1">
+                <p>Introduction to university life, core subjects, and first exams.</p>
+            </div>
+            <div class="year">
+                <h3>Year 2</h3>
+                <img src="year2.jpg" alt="Year 2">
+                <p>Advanced courses, group projects, and research opportunities.</p>
+            </div>
+            <div class="year">
+                <h3>Year 3</h3>
+                <img src="year3.jpg" alt="Year 3">
+                <p>Specialization, internships, and industry experience.</p>
+            </div>
+            <div class="year">
+                <h3>Year 4</h3>
+                <img src="year4.jpg" alt="Year 4">
+                <p>Final year projects, thesis, and graduation preparation.</p>
+            </div>
         </div>
     </div>
     
     <div id="projects" class="section" style="display:none;">
         <h2>Projects</h2>
-        <p>Here you can showcase major projects from each year.</p>
+        <p>Showcase your major projects from each year here.</p>
     </div>
     
     <script>
@@ -61,6 +99,7 @@
             document.getElementById('academics').style.display = 'none';
             document.getElementById('projects').style.display = 'none';
             document.getElementById(section).style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 </body>
